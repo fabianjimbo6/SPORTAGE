@@ -22,6 +22,7 @@ jobs:
           packages: "platforms;android-33 build-tools;36.0.0"
 
       - name: Build
+        working-directory: KiaSportage-Launcher
         env:
           BUILD_TOOLS: "36.0.0"
         run: sh build.sh
@@ -29,5 +30,5 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: KiaLauncher-${{ github.sha }}
-          path: build/KiaLauncher.apk
+          path: KiaSportage-Launcher/build/KiaLauncher.apk
           if-no-files-found: error
