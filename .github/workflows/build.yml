@@ -12,6 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Descomprimir proyecto
+        run: unzip -q KiaSportage-Launcher.zip
+
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
